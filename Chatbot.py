@@ -6,8 +6,20 @@ pairs = [
         ["Hello %1, How are you today ?", ]
     ],
     [
+        r"i am fine(.*)",
+        ["How can i help you ?", ]
+    ],
+     [
+        r"what can you do ?|how can you help me ?",
+        ["I am in Learning Phase \n I help you with :-\n General informations about India !", ]
+    ],
+    [
         r"what is your name ?",
-        ["My name is Chatty and I'm a chatbot ?", ]
+        ["My name is Gideon and I'm a smart chatbot ? and you are ?", ]
+    ],
+     [
+        r"who created you ?|who build you ?",
+        ["I am created by Aditya Mandil", ]
     ],
     [
         r"how are you ?",
@@ -27,7 +39,7 @@ pairs = [
     ],
     [
         r"(.*) age?",
-        ["I'm a computer program dude\nSeriously you are asking me this?", ]
+        ["I'm as young as you are !", ]
 
     ],
     [
@@ -35,10 +47,7 @@ pairs = [
         ["Make me an offer I can't refuse", ]
 
     ],
-    [
-        r"(.*) created ?",
-        ["Nagesh created me using Python's NLTK library ", "top secret ;)", ]
-    ],
+    
     [
         r"(.*) (location|city) ?",
         ['Chennai, Tamil Nadu', ]
@@ -70,21 +79,20 @@ pairs = [
     ],
     [
         r"who (.*) (moviestar|actor)?",
-        ["Brad Pitt"]
+        ["Shahrukh Khan"]
     ],
     [
-        r"quit",
-        ["BBye take care. See you soon :) ", "It was nice talking to you. See you soon :)"]
+        r"quit|byee",
+        ["BBye take care. See you soon :) ", "It was nice talking to you. See you soon :)", " Great ! See you next time "]
     ],
 ]
 
 
-def chatty():
-    print(
-        "Hi, I'm Chatty and I chat alot ;)\nPlease type lowercase English language to start a conversation. Type quit to leave ")  # default message at the start
+def Gideon():
+    print("Hi, I'm Gideon and I chat alot ;)\nPlease type lowercase English language to start a conversation. Type quit to leave ")  # default message at the start
 
 
 chat = Chat(pairs, reflections)
 chat.converse()
 if __name__ == "__main__":
-    chatty()
+    Gideon()
